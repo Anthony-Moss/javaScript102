@@ -13,3 +13,15 @@ function printNumbers2(start, end) {
     }
 }
 printNumbers2(1, 10)
+
+function printSquare(size) {
+    let lines = 0
+    let square =''
+    let star = '*'
+    while (lines < size) {
+        lines = lines + 1
+        square += star.repeat(size) + "\n"
+    }
+    console.log(square)
+}
+printSquare(5)
