@@ -134,9 +134,7 @@ function transl33t(originalString) {
     // put its value in `result`
     for (let i = 0; i < originalString.length; i++) {
         let theLetter = originalString[i].toUpperCase();
-        console.log(theLetter);
-        console.log(leetDictionary[theLetter]);
-        if (leetDictionary[theLetter] || leetDictionary[theLetter] === 0) {
+        if (leetDictionary[theLetter] !== undefined) {
             result += leetDictionary[theLetter]
         } else {
             result += theLetter
