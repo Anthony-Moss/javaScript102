@@ -68,6 +68,13 @@ function printBanner(string) {
 }
 printBanner('Digital Crafts')
 
+function factors(number) {
+    const numFactors = number => Array
+        .from(Array(number + 1), (_, i) => i)
+        .filter(i => number % i == 0)
+    console.log(numFactors(number))
+}
+factors(36)
 
 function cipher(string, offset) {
     // const alph = 'abcdefghijklmnopqrstuvwxyz '
@@ -87,4 +94,4 @@ function cipher(string, offset) {
     }
     return newSentence;
 }
-console.log(cipher('The cat in the hat', 14));
+console.log(cipher('The cat in the hat', 13));
