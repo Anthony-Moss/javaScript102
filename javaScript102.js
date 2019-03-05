@@ -85,13 +85,33 @@ function cipher(string, offset) {
         // return ascii;
         if ((ascii) >=65 && (ascii) <= 90) {
             letter = String.fromCharCode(((ascii - 65 + offset) % 26) + 65);
-            console.log(letter)
+            
         } else if ((ascii) >=97 && (ascii) <= 122) {
             letter = String.fromCharCode(((ascii - 97 + offset) % 26) + 97);
-            console.log(letter)
+            
         }
         newSentence += letter;
     }
     return newSentence;
 }
-console.log(cipher('The cat in the hat', 13));
+console.log(cipher('The cat in the hat', 14));
+
+// Gur png va  gur ung
+
+function decipher(string, offset) {
+    let decipherString = '';
+    for (let i = 0; i <  string.length; i++) {
+        let letter = string[i]
+        let ascii = string.charCodeAt(i);
+        if ((ascii) >= 65  && (ascii) <= 90) {
+            letter = String.fromCharCode(((ascii - 65 + offset) % 26) + 65);
+
+        } else if ((ascii)  >= 97 && (ascii ) <= 122) {
+            letter = String.fromCharCode(((ascii - 97 + offset) % 26)  +  97);
+        }
+        decipherString += letter;
+    }
+    return decipherString
+}
+
+console.log(decipher("Gur png  va gur ung", 13))
