@@ -67,6 +67,8 @@ function printBanner(string) {
 }
 }
 printBanner('Digital Crafts')
+
+
 function cipher(string, offset) {
     // const alph = 'abcdefghijklmnopqrstuvwxyz '
     let newSentence = '';
@@ -82,8 +84,7 @@ function cipher(string, offset) {
             console.log(letter)
         }
         newSentence += letter;
-
     }
     return newSentence;
 }
-console.log(cipher('Genius without education is like silver in the mine', 13));
+console.log(cipher('The cat in the hat', 14));
